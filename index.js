@@ -6,7 +6,9 @@ var visit = cake = require('./app/APIs/visits');
 
 mongoose.connect('mongodb://localhost/visitors');
 
-app.listen(3000);
+app.listen(3000, function() {
+	console.log('listening');
+});
 
 app.use(bodyParser());
 app.post('/api/visits', visit.create);
