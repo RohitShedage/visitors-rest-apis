@@ -11,7 +11,7 @@ module.exports.listAll = function (req, res){
 module.exports.fetch = function (req, res){
 	return fetchVisitsForGivenVisitor(req.params.contactNumber)
 		.then((visitors) => {
-			res.json(visitors);
+			return res.json(visitors);
 		});
 };
 

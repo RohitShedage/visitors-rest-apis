@@ -16,6 +16,10 @@ var visitSchema = new mongoose.Schema({
 module.exports = mongoose.model('Visit', {
 	name: String,
 	contactNumber: {type: String, required: true, unique: true},
+	gender: String,
+	identityType: String,
+	identityNumber: String,
+	photoId: String,
 	societyName: String,
 	visits:[visitSchema]
 });
