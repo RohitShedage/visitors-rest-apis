@@ -20,5 +20,5 @@ app.get('/api/visits/:contactNumber', visit.fetch);
 
 
 //Member APIs
-app.post('/api/members', visit.create);
-app.get('/api/:societyName/members/:flatNumber', visit.fetch);
+app.post('/api/members', member.create);
+app.get('/api/:societyName/members/:flatNumber', member.fetch);
