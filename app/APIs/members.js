@@ -21,9 +21,9 @@ function logError(err) {
     console.log(err);
 }
 
-function fetchMembersForGivenFlat(contactNumber){
+function fetchMembersForGivenFlat(societyName, flatNumber){
     return new Promise((resolve, reject) => {
-        Member.find({contactNumber: contactNumber}, function(err, results){
+        Member.find({societyName: societyName, flatNumber: flatNumber}, function(err, results){
             if (err) {
                 logError(err);
                 return reject(err);
